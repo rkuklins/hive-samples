@@ -17,7 +17,7 @@ def get_field_value(json_data, field_name):
 
 
 headers = { 
-    'Authorization': 'Token 52dVVJa5x0cw3j1wlkcrkS6L28FRiKec',
+    'Authorization': 'Token 4bpfdVgCcajQsgs9DQa10rEBl36hWvXb',
 }
 
 data = {
@@ -26,12 +26,8 @@ data = {
 
 
 # Specify the directory path
-directory = '/Users/rafalkuklinski/dev/SC/hive-samples/sample_images/Meds'
 root_directory = '/Users/rafalkuklinski/dev/SC/hive-samples/sample_images'
 
-# Get all file names in the directory
-file_names = os.listdir(directory)
-            
 # Process the response
 #print(json.dumps(response, indent = 4, sort_keys=True));
 
@@ -68,7 +64,7 @@ with open(csv_file_name, 'w', newline='') as csv_file:
         
         # Iterate over each file
         for file_name in files:
-            print ("DIR: " + root_directory + " FILE: " + file_name)
+            print ("DIR: " + root + " FILE: " + file_name)
             # Construct the file path
             file_path = os.path.join(root, file_name)
             
@@ -86,20 +82,24 @@ with open(csv_file_name, 'w', newline='') as csv_file:
                 # Process the response
                 response_dict = response.json() 
 
-                #If this is first line, get all the headers and add to the CSV file
-                if(is_first_line):
-                    is_first_line = False
-                    print("CSV Empty: " + str(os.stat(csv_file_name).st_size == 0))
-                    line = ["file name"];
-                    for reco_class in response_dict['status'][0]['response']['output'][0]['classes']:
-                        line.append(str(reco_class['class']))
+                try:
+                    #If this is first line, get all the headers and add to the CSV file
+                    if(is_first_line):
                         
-                    writer.writerow(line)
+                        print("CSV Empty: " + str(os.stat(csv_file_name).st_size == 0))
+                        line = ["directory", "file name"];
+                        for reco_class in response_dict['status'][0]['response']['output'][0]['classes']:
+                            line.append(str(reco_class['class']))
+                            
+                        writer.writerow(line)
+                        is_first_line = False
 
-                # In any case process all the values and add a line
-                line = [file_name];
-                for reco_class in response_dict['status'][0]['response']['output'][0]['classes']:
-                    line.append(str(reco_class['score']))
+                    # In any case process all the values and add a line
+                    line = [root, file_name];
+                    for reco_class in response_dict['status'][0]['response']['output'][0]['classes']:
+                        line.append(str(reco_class['score']))
 
-                writer.writerow(line)   
+                    writer.writerow(line)   
+                except:
+                    print("Error processing: " + file_name)
 
