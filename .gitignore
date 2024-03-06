@@ -3,4 +3,5 @@
 /sample_images
 /sample_texts
 /response.csv
-/response.json
+/hive_text_response_example.json
+/hive_visual_response_example.json
