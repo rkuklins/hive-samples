@@ -1,0 +1,52 @@
+{'id': 'd1d64910-db8c-11ee-9780-5d1ac319b80c', 'code': 200, 'project_id': 57047, 'user_id': 4762, 'created_on': '2024-03-06T07: 40: 35.789Z', 'status': [
+        {'status': {'code': '0', 'message': 'SUCCESS'
+            }, 'response': {'input': {'hash': '3f7f1b9c3365320fe3237cb2bae88280', 'inference_client_version': '0.0.0', 'model_type': 'TEXT_CLASSIFICATION', 'text': 'Suck My Pussy Nigga Every Opp Shot Nigga Gang Gang Nigga', 'model_version': 1, 'model': 'pytorch_textmod_xlmr_multilevel_02_04_24_triton', 'id': 'd1d64910-db8c-11ee-9780-5d1ac319b80c', 'created_on': '2024-03-06T07: 40: 35.745Z', 'user_id': 4762, 'project_id': 57047, 'charge': 0.0005
+                }, 'urls': [], 'output': [
+                    {'classes': [
+                            {'score': 3, 'class': 'bullying'
+                            },
+                            {'score': 0, 'class': 'drugs'
+                            },
+                            {'score': 0, 'class': 'child_exploitation'
+                            },
+                            {'score': 0, 'class': 'gibberish'
+                            },
+                            {'score': 0, 'class': 'self_harm'
+                            },
+                            {'score': 1, 'class': 'hate'
+                            },
+                            {'score': 0, 'class': 'phone_number'
+                            },
+                            {'score': 0, 'class': 'promotions'
+                            },
+                            {'score': 0, 'class': 'redirection'
+                            },
+                            {'score': 0, 'class': 'child_safety'
+                            },
+                            {'score': 3, 'class': 'sexual'
+                            },
+                            {'score': 0, 'class': 'spam'
+                            },
+                            {'score': 1, 'class': 'violence'
+                            },
+                            {'score': 0, 'class': 'weapons'
+                            }
+                        ], 'time': 0, 'start_char_index': 0, 'end_char_index': 56
+                    }
+                ], 'moderated_classes': ['sexual', 'hate', 'violence', 'bullying', 'spam', 'promotions', 'gibberish', 'child_exploitation', 'phone_number', 'drugs', 'self_harm', 'child_safety', 'weapons', 'redirection'
+                ], 'custom_classes': [], 'pii_entities': [], 'language': 'EN', 'text_filters': [
+                    {'start_index': 8, 'end_index': 13, 'type': 'profanity', 'value': 'PUSSY'
+                    },
+                    {'start_index': 14, 'end_index': 19, 'type': 'profanity', 'value': 'NIGGA'
+                    },
+                    {'start_index': 35, 'end_index': 40, 'type': 'profanity', 'value': 'NIGGA'
+                    },
+                    {'start_index': 51, 'end_index': 56, 'type': 'profanity', 'value': 'NIGGA'
+                    }
+                ]
+            }
+        }
+    ], 'from_cache': False, 'metadata': '{
+        "my_UUID": "3c78fc82-f797-11ea-adc1-0242ac120002"
+    }'
+}

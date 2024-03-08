@@ -1,0 +1,505 @@
+{
+    "id": "70856b80-d251-11ee-a5c1-936b1065cb44",
+    "code": 200,
+    "project_id": 57046,
+    "user_id": 4762,
+    "created_on": "2024-02-23T13:42:52.054Z",
+    "status": [
+        {
+            "status": {
+                "code": "0",
+                "message": "SUCCESS"
+            },
+            "response": {
+                "input": {
+                    "id": "70856b80-d251-11ee-a5c1-936b1065cb44",
+                    "charge": 0.003,
+                    "model": "mod60_dense",
+                    "model_version": 1,
+                    "model_type": "CATEGORIZATION",
+                    "created_on": "2024-02-23T13:42:51.704Z",
+                    "media": {
+                        "url": null,
+                        "filename": "Screenshot 2024-02-23 at 13.34.18.png",
+                        "type": "PHOTO",
+                        "mime_type": "png",
+                        "mimetype": "image/png",
+                        "width": 1972,
+                        "height": 492,
+                        "num_frames": 1,
+                        "duration": 0
+                    },
+                    "user_id": 4762,
+                    "project_id": 57046,
+                    "config_version": 1,
+                    "config_tag": "default"
+                },
+                "output": [
+                    {
+                        "time": 0,
+                        "classes": [
+                            {
+                                "class": "general_not_nsfw_not_suggestive",
+                                "score": 0.9999982706219237
+                            },
+                            {
+                                "class": "general_nsfw",
+                                "score": 4.878500351682881e-7
+                            },
+                            {
+                                "class": "general_suggestive",
+                                "score": 0.0000012415280410538589
+                            },
+                            {
+                                "class": "no_female_underwear",
+                                "score": 0.9999996202147358
+                            },
+                            {
+                                "class": "yes_female_underwear",
+                                "score": 3.797852642822915e-7
+                            },
+                            {
+                                "class": "no_male_underwear",
+                                "score": 0.999999994557685
+                            },
+                            {
+                                "class": "yes_male_underwear",
+                                "score": 5.442314957784811e-9
+                            },
+                            {
+                                "class": "no_sex_toy",
+                                "score": 0.9999999142326563
+                            },
+                            {
+                                "class": "yes_sex_toy",
+                                "score": 8.576734374674299e-8
+                            },
+                            {
+                                "class": "no_female_nudity",
+                                "score": 0.9999999442443859
+                            },
+                            {
+                                "class": "yes_female_nudity",
+                                "score": 5.575561413485399e-8
+                            },
+                            {
+                                "class": "no_male_nudity",
+                                "score": 0.9999999885785772
+                            },
+                            {
+                                "class": "yes_male_nudity",
+                                "score": 1.1421422810775392e-8
+                            },
+                            {
+                                "class": "no_female_swimwear",
+                                "score": 0.9999999896242927
+                            },
+                            {
+                                "class": "yes_female_swimwear",
+                                "score": 1.0375707196663237e-8
+                            },
+                            {
+                                "class": "no_male_shirtless",
+                                "score": 0.9999999930884735
+                            },
+                            {
+                                "class": "yes_male_shirtless",
+                                "score": 6.911526519397493e-9
+                            },
+                            {
+                                "class": "no_text",
+                                "score": 0.006026157518452566
+                            },
+                            {
+                                "class": "text",
+                                "score": 0.9939738424815474
+                            },
+                            {
+                                "class": "animated",
+                                "score": 0.0000060617166761509005
+                            },
+                            {
+                                "class": "hybrid",
+                                "score": 0.00003794467916260545
+                            },
+                            {
+                                "class": "natural",
+                                "score": 0.9999559936041612
+                            },
+                            {
+                                "class": "animated_gun",
+                                "score": 9.707860995520341e-11
+                            },
+                            {
+                                "class": "gun_in_hand",
+                                "score": 6.135767918804385e-9
+                            },
+                            {
+                                "class": "gun_not_in_hand",
+                                "score": 1.6971848642116976e-8
+                            },
+                            {
+                                "class": "no_gun",
+                                "score": 0.9999999767953048
+                            },
+                            {
+                                "class": "culinary_knife_in_hand",
+                                "score": 1.734143186189681e-10
+                            },
+                            {
+                                "class": "culinary_knife_not_in_hand",
+                                "score": 7.228491861229406e-9
+                            },
+                            {
+                                "class": "knife_in_hand",
+                                "score": 1.2179849775529932e-7
+                            },
+                            {
+                                "class": "knife_not_in_hand",
+                                "score": 0.000001275303541241472
+                            },
+                            {
+                                "class": "no_knife",
+                                "score": 0.9999985954960549
+                            },
+                            {
+                                "class": "a_little_bloody",
+                                "score": 4.145398787453378e-7
+                            },
+                            {
+                                "class": "no_blood",
+                                "score": 0.999999285729357
+                            },
+                            {
+                                "class": "other_blood",
+                                "score": 2.9845611201435993e-7
+                            },
+                            {
+                                "class": "very_bloody",
+                                "score": 1.2746521892985825e-9
+                            },
+                            {
+                                "class": "no_fight",
+                                "score": 0.9999999858174813
+                            },
+                            {
+                                "class": "yes_fight",
+                                "score": 1.4182518843539822e-8
+                            },
+                            {
+                                "class": "no_pills",
+                                "score": 0.997305993557397
+                            },
+                            {
+                                "class": "yes_pills",
+                                "score": 0.002694006442603086
+                            },
+                            {
+                                "class": "no_smoking",
+                                "score": 0.9999996667447226
+                            },
+                            {
+                                "class": "yes_smoking",
+                                "score": 3.3325527742399433e-7
+                            },
+                            {
+                                "class": "illicit_injectables",
+                                "score": 4.179064816698892e-8
+                            },
+                            {
+                                "class": "medical_injectables",
+                                "score": 0.0000021595216160581534
+                            },
+                            {
+                                "class": "no_injectables",
+                                "score": 0.9999977986877359
+                            },
+                            {
+                                "class": "no_nazi",
+                                "score": 0.9999999969927824
+                            },
+                            {
+                                "class": "yes_nazi",
+                                "score": 3.007217633447208e-9
+                            },
+                            {
+                                "class": "no_kkk",
+                                "score": 0.9999999673699871
+                            },
+                            {
+                                "class": "yes_kkk",
+                                "score": 3.263001302046355e-8
+                            },
+                            {
+                                "class": "no_middle_finger",
+                                "score": 0.9999998883705121
+                            },
+                            {
+                                "class": "yes_middle_finger",
+                                "score": 1.1162948782123127e-7
+                            },
+                            {
+                                "class": "no_terrorist",
+                                "score": 0.9999996588375744
+                            },
+                            {
+                                "class": "yes_terrorist",
+                                "score": 3.411624255103833e-7
+                            },
+                            {
+                                "class": "no_overlay_text",
+                                "score": 0.00007488260118574345
+                            },
+                            {
+                                "class": "yes_overlay_text",
+                                "score": 0.9999251173988143
+                            },
+                            {
+                                "class": "no_sexual_activity",
+                                "score": 0.9999999812499328
+                            },
+                            {
+                                "class": "yes_sexual_activity",
+                                "score": 1.875006720639441e-8
+                            },
+                            {
+                                "class": "no_marijuana",
+                                "score": 0.9999935785588671
+                            },
+                            {
+                                "class": "yes_marijuana",
+                                "score": 0.000006421441132970591
+                            },
+                            {
+                                "class": "hanging",
+                                "score": 5.5264267301164014e-11
+                            },
+                            {
+                                "class": "no_hanging_no_noose",
+                                "score": 0.9999999998548921
+                            },
+                            {
+                                "class": "noose",
+                                "score": 8.984376706352823e-11
+                            },
+                            {
+                                "class": "no_realistic_nsfw",
+                                "score": 0.9999999517223134
+                            },
+                            {
+                                "class": "yes_realistic_nsfw",
+                                "score": 4.8277686575092076e-8
+                            },
+                            {
+                                "class": "animated_corpse",
+                                "score": 1.0346606582789416e-10
+                            },
+                            {
+                                "class": "human_corpse",
+                                "score": 3.2328091772262543e-9
+                            },
+                            {
+                                "class": "no_corpse",
+                                "score": 0.9999999966637247
+                            },
+                            {
+                                "class": "no_self_harm",
+                                "score": 0.9999999984846453
+                            },
+                            {
+                                "class": "yes_self_harm",
+                                "score": 1.5153547979443123e-9
+                            },
+                            {
+                                "class": "no_drawing",
+                                "score": 0.9999998988191416
+                            },
+                            {
+                                "class": "yes_drawing",
+                                "score": 1.0118085830855605e-7
+                            },
+                            {
+                                "class": "no_emaciated_body",
+                                "score": 0.9999999998593867
+                            },
+                            {
+                                "class": "yes_emaciated_body",
+                                "score": 1.4061322931080563e-10
+                            },
+                            {
+                                "class": "no_child_present",
+                                "score": 0.9999999401664124
+                            },
+                            {
+                                "class": "yes_child_present",
+                                "score": 5.983358759288083e-8
+                            },
+                            {
+                                "class": "no_sexual_intent",
+                                "score": 0.9999999964295048
+                            },
+                            {
+                                "class": "yes_sexual_intent",
+                                "score": 3.57049524385219e-9
+                            },
+                            {
+                                "class": "animal_genitalia_and_human",
+                                "score": 6.624117670084455e-10
+                            },
+                            {
+                                "class": "animal_genitalia_only",
+                                "score": 2.2992032045910185e-9
+                            },
+                            {
+                                "class": "animated_animal_genitalia",
+                                "score": 2.5639609257555395e-9
+                            },
+                            {
+                                "class": "no_animal_genitalia",
+                                "score": 0.999999994474424
+                            },
+                            {
+                                "class": "no_gambling",
+                                "score": 0.9999999963719319
+                            },
+                            {
+                                "class": "yes_gambling",
+                                "score": 3.6280680508057732e-9
+                            },
+                            {
+                                "class": "no_undressed",
+                                "score": 0.9999999991915509
+                            },
+                            {
+                                "class": "yes_undressed",
+                                "score": 8.084489746758044e-10
+                            },
+                            {
+                                "class": "no_confederate",
+                                "score": 0.9999999998266551
+                            },
+                            {
+                                "class": "yes_confederate",
+                                "score": 1.7334495071876626e-10
+                            },
+                            {
+                                "class": "animated_alcohol",
+                                "score": 3.1617150082384714e-10
+                            },
+                            {
+                                "class": "no_alcohol",
+                                "score": 0.9999999836145024
+                            },
+                            {
+                                "class": "yes_alcohol",
+                                "score": 1.5119329533378318e-8
+                            },
+                            {
+                                "class": "yes_drinking_alcohol",
+                                "score": 9.499964652989254e-10
+                            },
+                            {
+                                "class": "no_bra",
+                                "score": 0.9999999881923874
+                            },
+                            {
+                                "class": "yes_bra",
+                                "score": 1.1807612554545242e-8
+                            },
+                            {
+                                "class": "no_sports_bra",
+                                "score": 0.9999999919514778
+                            },
+                            {
+                                "class": "yes_sports_bra",
+                                "score": 8.048522227915453e-9
+                            },
+                            {
+                                "class": "no_panties",
+                                "score": 0.9999999816064534
+                            },
+                            {
+                                "class": "yes_panties",
+                                "score": 1.8393546568432353e-8
+                            },
+                            {
+                                "class": "no_cleavage",
+                                "score": 0.9999999955860834
+                            },
+                            {
+                                "class": "yes_cleavage",
+                                "score": 4.4139164375129324e-9
+                            },
+                            {
+                                "class": "no_sportswear_bottoms",
+                                "score": 0.999999999326721
+                            },
+                            {
+                                "class": "yes_sportswear_bottoms",
+                                "score": 6.732790750221388e-10
+                            },
+                            {
+                                "class": "no_negligee",
+                                "score": 0.9999999996673203
+                            },
+                            {
+                                "class": "yes_negligee",
+                                "score": 3.3267965189204023e-10
+                            },
+                            {
+                                "class": "no_miniskirt",
+                                "score": 0.9999999999189533
+                            },
+                            {
+                                "class": "yes_miniskirt",
+                                "score": 8.104672362015599e-11
+                            },
+                            {
+                                "class": "no_bodysuit",
+                                "score": 0.9999998071907071
+                            },
+                            {
+                                "class": "yes_bodysuit",
+                                "score": 1.9280929278576945e-7
+                            },
+                            {
+                                "class": "no_religious_icon",
+                                "score": 0.9999999951215961
+                            },
+                            {
+                                "class": "yes_religious_icon",
+                                "score": 4.878403772373095e-9
+                            },
+                            {
+                                "class": "no_qr_code",
+                                "score": 0.9999378022864767
+                            },
+                            {
+                                "class": "yes_qr_code",
+                                "score": 0.00006219771352322283
+                            },
+                            {
+                                "class": "no_animal_abuse",
+                                "score": 0.9999999987070902
+                            },
+                            {
+                                "class": "yes_animal_abuse",
+                                "score": 1.2929096913491145e-9
+                            },
+                            {
+                                "class": "no_bulge",
+                                "score": 0.9999999942022586
+                            },
+                            {
+                                "class": "yes_bulge",
+                                "score": 5.797741277750184e-9
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ],
+    "from_cache": false,
+    "metadata": "{\"my_UUID\": \"3c78fc82-f797-11ea-adc1-0242ac120002\"}"
+}
