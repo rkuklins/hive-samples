@@ -5,8 +5,8 @@ import requests
 import csv
 
 # Specify the path of the CSV file
-csv_input_file_name = '/Users/rafalkuklinski/dev/SC/hive-samples/sample_texts/random_texts.csv'
-csv_output_file_name = '/Users/rafalkuklinski/dev/SC/hive-samples/sample_texts/hive_response_random.csv'
+csv_input_file_name = '/Users/rafalkuklinski/dev/SC/hive-samples/sample_texts/texts.csv'
+csv_output_file_name = '/Users/rafalkuklinski/dev/SC/hive-samples/sample_texts/hive_response.csv'
 
 is_first_line = True
 
@@ -17,12 +17,17 @@ headers = {
 }
 
 data = {
-  'text_data': 'Suck My Pussy Nigga Every Opp Shot Nigga Gang Gang Nigga',
+  'text_data': '',
   'metadata': '{"my_UUID": "3c78fc82-f797-11ea-adc1-0242ac120002"}'
 }
 
 texts = []
 text_no=0;
+
+#table with all the sorted headers
+header_keys = []
+#association table with headers nd their corresponding values
+header_value = {} 
 
 # Load CSV file into a structure
 with open(csv_input_file_name, 'r') as file:
@@ -55,19 +60,24 @@ with open(csv_output_file_name, 'w', newline='') as csv_file:
         #If this is first line, get all the headers and add to the CSV file
         if(is_first_line):
             
-            line = ["file name", "text"];
+            header_keys = ["file name", "text"];
             for reco_class in response_dict['status'][0]['response']['output'][0]['classes']:
-                line.append(str(reco_class['class']))
-                
-            writer.writerow(line)
+              header_keys.append(str(reco_class['class']))
+            
+            writer.writerow(header_keys)
             is_first_line = False
 
         # In any case process all the values and add a line
-        line = [csv_input_file_name, text];
+        header_value['file name'] = csv_input_file_name;
+        header_value['text'] = text;
         for reco_class in response_dict['status'][0]['response']['output'][0]['classes']:
-            line.append(str(reco_class['score']))
+            header_value[str(reco_class['class'])] = str(reco_class['score']);
+
+        line = []
+        for key in header_keys:
+            line.append(header_value[key])
 
         writer.writerow(line)   
     except:
-        print("Error processing: " + file_name)
+        print("Error processing: " + csv_input_file_name + " text: " + text)
 # -------------------------- #

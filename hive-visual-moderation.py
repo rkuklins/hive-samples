@@ -50,8 +50,10 @@ for reco_class in response['status'][0]['response']['output'][0]['classes']:
 #status = response['status'][0]['response']['output'][0]['classes'][3]['class']
 
 '''
-
-
+#table with all the sorted headers
+header_keys = []
+#association table with headers nd their corresponding values
+header_value = {} 
 
 # Open the CSV file in write mode
 with open(csv_file_name, 'w', newline='') as csv_file:
@@ -86,18 +88,22 @@ with open(csv_file_name, 'w', newline='') as csv_file:
                     #If this is first line, get all the headers and add to the CSV file
                     if(is_first_line):
                         
-                        print("CSV Empty: " + str(os.stat(csv_file_name).st_size == 0))
-                        line = ["directory", "file name"];
+                        header_keys = ["directory", "file name"];
                         for reco_class in response_dict['status'][0]['response']['output'][0]['classes']:
-                            line.append(str(reco_class['class']))
-                            
-                        writer.writerow(line)
+                            header_keys.append(str(reco_class['class']))
+
+                        writer.writerow(header_keys)
                         is_first_line = False
 
                     # In any case process all the values and add a line
-                    line = [root, file_name];
+                    header_value['directory'] = root;
+                    header_value['file name'] = file_name;
                     for reco_class in response_dict['status'][0]['response']['output'][0]['classes']:
-                        line.append(str(reco_class['score']))
+                        header_value[str(reco_class['class'])] = str(reco_class['score']);
+
+                    line = []; 
+                    for key in header_keys:
+                        line.append(header_value[key])
 
                     writer.writerow(line)   
                 except:
